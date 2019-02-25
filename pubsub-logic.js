@@ -14,7 +14,7 @@ Bus.prototype = {
     // второй - функция обратного вызова, создающая шаблон для вывода информации 
     subscriber: function (name, callback) {
 
-        // если массива с именем комнаты не существует, то создаем
+        // если массива с именем комнаты не существует, то создаем массив
         if (!this.rooms[name])
             this.rooms[name] = [];
 
@@ -65,4 +65,4 @@ bus.publish('room1', 'Welcome to the room1!');
 bus.publish('room2', 'Welcome to the room2!');
 
 // сообщение в неизвестную комнату
-bus.publish('room666', 'Welcome to the room2!');
+bus.publish('room666', 'Welcome to the room666!');
