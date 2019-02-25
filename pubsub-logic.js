@@ -61,8 +61,8 @@ bus.subscriber('room2', function (roomContent) {
 
 
 // всё, что после певрого аргумента - сообщения для комнаты
-bus.publish('room1', 'Welcom to the room1!');
-bus.publish('room2', 'Welcom to the room2!');
+bus.publish('room1', 'Welcome to the room1!');
+bus.publish('room2', 'Welcome to the room2!');
 
 // сообщение в неизвестную комнату
-bus.publish('room666', 'Welcom to the room2!');
+bus.publish('room666', 'Welcome to the room2!');
