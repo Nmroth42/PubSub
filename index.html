@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PubSub</title>
+
+</head>
+
+<body>
+
+    <h3 style="margin-left: auto;margin-right: auto; width:80vw;">Publisher/Subscriber </h3>
+    <hr style="color:rgba(0, 0, 0, 0.500);">
+    <div style="margin-left: auto;margin-right: auto; width:80vw;">
+        <h3 style="margin-left: auto;margin-right: auto; width:80vw;">Executive part of the code</h3>
+        <textarea name="" readonly id="" cols="30" rows="100" style=" border:none; width:100%;  height:260px; background: white; color:black">
+                var bus = new Bus();
+
+                bus.subscriber('room1', function (roomContent) {
+                    console.log('new message in room1! content: ' + roomContent);
+                });
+                
+                bus.subscriber('room2', function (roomContent) {
+                    console.log('new message in room2! content: ' + roomContent);
+                });
+                
+                bus.publish('room1', 'Welcom to the room1!');
+                bus.publish('room2', 'Welcom to the room2!');
+                
+                bus.publish('room666', 'Welcom to the room2!');
+                
+
+    </textarea>
+        <hr>
+        <h3 style="margin-left: auto;margin-right: auto; width:80vw;">Output. </h3>
+
+
+        You can check out result in the console.
+        <br>
+        <span style="color:green">
+            // there are additional comments in the file <span style="   font-style: italic;"> pubsub-logic.js </span>
+        </span>
+    </div>
+
+    <script type="text/javascript" src="pubsub-logic.js"></script>
+</body>
+
+</html>
